@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.PerspectiveTransform?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="clientHome" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" styleClass="body" stylesheets="@style.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="makery.marketplace.view.ClientController">
+   <children>
+      <Label layoutX="217.0" layoutY="14.0" text="Bienvenue" textFill="#22c117">
+         <font>
+            <Font name="Cambria Bold" size="34.0" />
+         </font>
+      </Label>
+      <Pane layoutX="-1.0" layoutY="57.0" prefHeight="30.0" prefWidth="600.0" />
+      <VBox layoutX="249.0" layoutY="100.0" prefHeight="200.0" prefWidth="100.0">
+         <children>
+            <Button fx:id="catalogueButton" mnemonicParsing="false" onAction="#catalogueButton" prefHeight="39.0" prefWidth="99.0" text="Catalogue">
+               <styleClass>
+                  <String fx:value="decouvrir-button" />
+                  <String fx:value="shadow" />
+               </styleClass>
+               <effect>
+                  <PerspectiveTransform />
+               </effect>
+            </Button>
+            <Pane prefHeight="150.0" prefWidth="100.0" />
+            <Button fx:id="panierButton" mnemonicParsing="false" onAction="#panierButtonAction" prefHeight="26.0" prefWidth="101.0" text="Panier">
+               <styleClass>
+                  <String fx:value="decouvrir-button" />
+                  <String fx:value="shadow" />
+               </styleClass>
+            </Button>
+            <Pane prefHeight="150.0" prefWidth="200.0" />
+            <Button fx:id="commandeButton" mnemonicParsing="false" prefHeight="26.0" prefWidth="98.0" text="Commande">
+               <styleClass>
+                  <String fx:value="decouvrir-button" />
+                  <String fx:value="shadow" />
+               </styleClass>
+            </Button>
+         </children>
+      </VBox>
+      <Button fx:id="logoutButton" layoutX="474.0" layoutY="350.0" mnemonicParsing="false" text="Deconnexion">
+         <font>
+            <Font name="Cambria Bold" size="15.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="0.45833332610852784" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill>
+         <styleClass>
+            <String fx:value="logout-button" />
+            <String fx:value="shadow" />
+         </styleClass>
+      </Button>
+   </children>
+</AnchorPane>
